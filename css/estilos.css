@@ -1,0 +1,281 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Montserrat',sans-serif;
+}
+
+body{
+background:#f5f7fb;
+color:#111;
+overflow-x:hidden;
+}
+
+/* HEADER */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:#0033A0;
+flex-wrap:wrap;
+}
+
+.logo{
+font-size:24px;
+font-weight:800;
+color:#FFD100;
+}
+
+nav{
+display:flex;
+flex-wrap:wrap;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+font-weight:500;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#FFD100;
+}
+
+
+/* BANNER */
+
+.banner{
+
+min-height:70vh;
+
+background:
+linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+url('../img/banner.jpg');
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+text-align:center;
+
+color:white;
+
+padding:60px 20px;
+}
+
+.banner-text{
+max-width:800px;
+}
+
+.banner-text h1{
+font-size:48px;
+line-height:1.2;
+margin-bottom:20px;
+}
+
+.banner-text p{
+font-size:20px;
+margin-bottom:30px;
+}
+
+.banner button{
+padding:14px 35px;
+background:#FFD100;
+border:none;
+border-radius:30px;
+font-weight:600;
+cursor:pointer;
+transition:0.3s;
+}
+
+.banner button:hover{
+background:white;
+}
+
+
+/* CARRUSEL */
+
+.carousel-section{
+padding:80px 8%;
+text-align:center;
+background:white;
+}
+
+.carousel-section h2{
+font-size:32px;
+color:#0033A0;
+margin-bottom:40px;
+}
+
+.carousel{
+overflow:hidden;
+border-radius:20px;
+box-shadow:0 20px 40px rgba(0,0,0,0.15);
+position:relative;
+}
+
+.slides{
+display:flex;
+animation:slide 15s infinite;
+}
+
+.carousel:hover .slides{
+animation-play-state:paused;
+}
+
+.slides img{
+flex:0 0 100%;
+width:100%;
+height:60vh;
+min-height:280px;
+object-fit:cover;
+object-position:center;
+}
+
+
+/* DOTS */
+
+.dots{
+position:absolute;
+bottom:20px;
+left:50%;
+transform:translateX(-50%);
+display:flex;
+gap:10px;
+}
+
+.dots span{
+width:12px;
+height:12px;
+background:white;
+border-radius:50%;
+opacity:0.7;
+}
+
+
+/* ANIMACION */
+
+@keyframes slide{
+
+0%{transform:translateX(0)}
+25%{transform:translateX(0)}
+
+33%{transform:translateX(-100%)}
+58%{transform:translateX(-100%)}
+
+66%{transform:translateX(-200%)}
+91%{transform:translateX(-200%)}
+
+100%{transform:translateX(0)}
+
+}
+
+
+/* FOOTER */
+
+footer{
+background:black;
+color:white;
+text-align:center;
+padding:25px;
+margin-top:50px;
+}
+
+
+/* -------- RESPONSIVE -------- */
+
+
+/* TABLETS */
+
+@media(max-width:900px){
+
+header{
+flex-direction:column;
+gap:10px;
+}
+
+nav a{
+margin:0 10px;
+}
+
+.banner{
+min-height:60vh;
+}
+
+.banner-text h1{
+font-size:34px;
+}
+
+.banner-text p{
+font-size:18px;
+}
+
+.slides img{
+height:40vh;
+}
+
+.carousel-section h2{
+font-size:28px;
+}
+
+}
+
+
+/* CELULARES */
+
+@media(max-width:600px){
+
+header{
+flex-direction:column;
+align-items:center;
+text-align:center;
+}
+
+nav{
+margin-top:10px;
+justify-content:center;
+}
+
+nav a{
+margin:5px 10px;
+font-size:14px;
+}
+
+.banner{
+min-height:55vh;
+padding:40px 20px;
+}
+
+.banner-text h1{
+font-size:26px;
+}
+
+.banner-text p{
+font-size:16px;
+}
+
+.banner button{
+padding:10px 25px;
+font-size:14px;
+}
+
+.slides img{
+height:220px;
+}
+
+.carousel-section{
+padding:50px 5%;
+}
+
+.carousel-section h2{
+font-size:24px;
+}
+
+}
